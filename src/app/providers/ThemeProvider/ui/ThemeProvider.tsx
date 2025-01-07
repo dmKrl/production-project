@@ -12,7 +12,7 @@ export const ThemeProvider: FC = ({ children }) => {
         setTheme: setTheme,
 
     }), [theme])
-    //12 минута 7 урока 
+
     return <ThemeContext.Provider value={defaultProps}>
         {children}
     </ThemeContext.Provider>;

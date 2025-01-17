@@ -15,8 +15,10 @@
         }
     },
     "ts-node": {
+        "include": ["./**/*.json"],
         "compilerOptions": {
-            "module": "CommonJS"
+            "module": "CommonJS",
+            "resolveJsonModule": true
         }
     }
 }

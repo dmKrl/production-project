@@ -1,10 +1,10 @@
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './Sidebar.module.scss';
 import { FC, useState } from 'react';
 import { ThemeSwitcher } from 'features';
 import { LangSwitcher } from 'entities/ui/LangSwitcher';
 import { Button } from 'shared/ui';
 import { ThemeButton } from 'shared/ui/Button/Button';
+import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
@@ -12,11 +12,11 @@ interface SidebarProps {
 
 export const Sidebar: FC<SidebarProps> = (props) => {
     const { className } = props;
-    const [collapsed, setCollapsed] = useState<boolean>(false)
+    const [collapsed, setCollapsed] = useState<boolean>(false);
 
     const onToggle = () => {
-        setCollapsed(prev => !prev)
-    }
+        setCollapsed((prev) => !prev);
+    };
 
     return (
         <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
@@ -27,4 +27,4 @@ export const Sidebar: FC<SidebarProps> = (props) => {
             </div>
         </div>
     );
-}
+};

@@ -13,10 +13,11 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         test: /\.svg$/i,
         issuer: /\.[t]sx?$/,
         use: [{
-            loader: '@svgr/webpack', options: {
+            loader: '@svgr/webpack',
+            options: {
                 typescript: true,
-                ext: "tsx",
-            }
+                ext: 'tsx',
+            },
         }],
 
     };
@@ -41,15 +42,13 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:4]'
-                            : '[hash:base64:8]'
+                            : '[hash:base64:8]',
                     },
-                }
+                },
             },
             'sass-loader',
         ],
     };
-
-
 
     return [typeScriptLoader, cssLoader, svgLoader, fileLoader];
 }

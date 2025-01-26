@@ -17,8 +17,8 @@ i18n
         },
 
         backend: {
-            loadPath: '/locales/{{lng}}/{{ns}}.json'
-        }
+            loadPath: '/locales/{{lng}}/{{ns}}.json',
+        },
     });
 // Поправить проблему с подгрузкой сразу 2х чанков с переводами
 

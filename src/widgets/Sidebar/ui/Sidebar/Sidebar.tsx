@@ -28,3 +28,5 @@ export const Sidebar: FC<SidebarProps> = (props) => {
         </div>
     );
 };
+
+// Остановился на настройке тестовой среды - Jest

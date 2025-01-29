@@ -22,6 +22,20 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
 
     };
 
+    const babelLoader = {
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: 'babel-loader',
+            options: {
+                targets: "defaults",
+                presets: [
+                    ['@babel/preset-env']
+                ]
+            }
+        }
+    }
+
     const fileLoader = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -50,5 +64,5 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         ],
     };
 
-    return [typeScriptLoader, cssLoader, svgLoader, fileLoader];
+    return [typeScriptLoader, cssLoader, svgLoader, babelLoader, fileLoader];
 }

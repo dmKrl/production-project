@@ -10,7 +10,6 @@ export const Loader: FC<LoaderProps> = (props) => {
     const { className } = props;
 
     return (
-        <span className={classNames('loader', {}, [className])}>
-        </span>
+        <span className={classNames('loader', {}, [className])} />
     );
-}
+};

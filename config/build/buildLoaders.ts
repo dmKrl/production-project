@@ -28,13 +28,13 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         use: {
             loader: 'babel-loader',
             options: {
-                targets: "defaults",
+                targets: 'defaults',
                 presets: [
-                    ['@babel/preset-env']
-                ]
-            }
-        }
-    }
+                    ['@babel/preset-env'],
+                ],
+            },
+        },
+    };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif)$/i,

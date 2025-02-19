@@ -23,10 +23,12 @@ export const Sidebar: FC<SidebarProps> = (props) => {
             <div className={classNames(cls.switchers, {}, [])}>
                 <LangSwitcher />
                 <ThemeSwitcher />
-                <Button onClick={onToggle} theme={ThemeButton.CLEAR}>Toggle</Button>
+                <Button
+                    onClick={onToggle}
+                    theme={ThemeButton.CLEAR}>
+                    {collapsed ? '>' : '<'}
+                </Button>
             </div>
         </div>
     );
 };
-
-// Остановился на настройке тестовой среды - Jest

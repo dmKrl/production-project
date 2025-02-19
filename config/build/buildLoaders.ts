@@ -60,7 +60,12 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
                     },
                 },
             },
-            'sass-loader',
+            {
+                loader: 'sass-loader',
+                options: {
+                    api: 'modern',
+                },
+            },
         ],
     };
 

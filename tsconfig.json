@@ -21,5 +21,20 @@
             "module": "CommonJS",
             "resolveJsonModule": true
         }
-    }
+    },
+    "overrides": [
+        {
+            "files": ["**/src/**/*.test.{ts,tsx}"],
+            "rules": {
+                "i18next/no-literal-string": "off"
+            }
+        },
+        {
+            "files": ["src/**/*.test.{ts,tsx}", "config/**/*{ts,tsx}"],
+            "rules": {
+                "import/no-extraneous-dependencies": "off"
+            }
+        }
+    ],
+    "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]
 }

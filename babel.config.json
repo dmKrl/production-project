@@ -1,7 +1,14 @@
 {
     "presets": [
         [
-            "@babel/preset-react",
+            "@babel/preset-env",
+            "@babel/preset-typescript",
+            [
+                "@babel/preset-react",
+                {
+                    "runtime": "automatic"
+                }
+            ],
             {
                 "pragma": "dom", // default pragma is React.createElement (only in classic runtime)
                 "pragmaFrag": "DomFrag", // default is React.Fragment (only in classic runtime)

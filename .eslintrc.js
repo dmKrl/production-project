@@ -32,7 +32,10 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'jsx-quotes': 'off',
-        'i18next/no-literal-string': ['warn', { markupOnly: true }],
+        'i18next/no-literal-string': [
+            'warn',
+            { markupOnly: true, ignoreAttributes: ['data-testid'] },
+        ],
         'max-len': ['error', { code: 100, ignoreComments: true }],
         'linebreak-style': 0,
     },

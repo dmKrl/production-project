@@ -9,16 +9,18 @@ export enum ThemeButton {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     theme?: ThemeButton;
+    sidebarToggle?: string;
 }
 
 export const Button: FC<ButtonProps> = (props) => {
     const {
-        className, theme, children, onClick,
+        className, theme, children, onClick, sidebarToggle
     } = props;
 
     return (
         <button
             type='button'
+            data-testid={sidebarToggle}
             onClick={onClick}
             className={classNames(cls.button, {}, [className, cls[theme]])}>
             {children}

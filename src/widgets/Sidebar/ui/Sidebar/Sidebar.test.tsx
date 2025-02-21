@@ -1,15 +1,14 @@
 import { fireEvent, screen } from '@testing-library/react';
 import { renderWithTranslation } from 'shared/lib/renderWithTranslation/renderWithTranslation';
-import { experiments } from 'webpack';
 import { Sidebar } from 'widgets/Sidebar/ui';
 
 describe('Sidebar UI Testing', () => {
     test('Sidebar render', () => {
-        renderWithTranslation(<Sidebar />)
+        renderWithTranslation(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
     test('Sidebar check button is collapsed', () => {
-        renderWithTranslation(<Sidebar />)
+        renderWithTranslation(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         const toggleButton = screen.getByTestId('sidebar-toggle');
 
@@ -17,7 +16,7 @@ describe('Sidebar UI Testing', () => {
         expect(screen.getByTestId('sidebar')).toHaveClass('collapsed');
     });
     test('Sidebar check button is not collapsed', () => {
-        renderWithTranslation(<Sidebar />)
+        renderWithTranslation(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
         const toggleButton = screen.getByTestId('sidebar-toggle');
 

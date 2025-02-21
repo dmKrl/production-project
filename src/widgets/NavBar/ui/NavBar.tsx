@@ -21,5 +21,3 @@ export const NavBar: FC<NavBarProps> = ({ className }) => {
         </div>
     );
 };
-
-// + необходимо разобраться с проблемой импортов scss классов в tsx компоненты - нет автокомплита.

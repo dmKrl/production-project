@@ -34,7 +34,7 @@ module.exports = {
         'jsx-quotes': 'off',
         'i18next/no-literal-string': [
             'warn',
-            { markupOnly: true, ignoreAttributes: ['data-testid'] },
+            { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'sidebarToggle'] },
         ],
         'max-len': ['error', { code: 100, ignoreComments: true }],
         'linebreak-style': 0,

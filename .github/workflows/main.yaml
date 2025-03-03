@@ -1,5 +1,4 @@
-name: Linting, testing, storybook
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: Linting, testing, building, storybook
 on:
     push:
         branches: [master]

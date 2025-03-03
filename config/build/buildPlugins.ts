@@ -18,7 +18,7 @@ export function buildPlugins({ paths, isDev }: BuildOptions):
         new webpack.DefinePlugin({
             __IS_DEV__: !!isDev,
         }),
-        new BundleAnalyzerPlugin({ openAnalyzer: false }),
+        isDev && new BundleAnalyzerPlugin({ openAnalyzer: false }),
         isDev && new webpack.HotModuleReplacementPlugin({ overlay: false }),
     ].filter(Boolean);
 }

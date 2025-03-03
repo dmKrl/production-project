@@ -38,7 +38,8 @@ module.exports = {
         ],
         'max-len': ['error', { code: 100, ignoreComments: true }],
         'linebreak-style': 0,
-        'react/jsx-props-no-spreading': false,
+        'react/jsx-props-no-spreading': 0,
+        'arrow-body-style': 0,
     },
     globals: {
         __IS_DEV__: true,

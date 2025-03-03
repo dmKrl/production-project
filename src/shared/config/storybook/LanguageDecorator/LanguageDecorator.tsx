@@ -1,7 +1,7 @@
-import { Suspense } from "react";
-import { I18nextProvider } from "react-i18next";
-import { Story } from "@storybook/react";
-import i18n from "./i18nForSb";
+import { Suspense } from 'react';
+import { I18nextProvider } from 'react-i18next';
+import { Story } from '@storybook/react';
+import i18n from './i18nForSb';
 
 export const LanguageDecorator = (story: () => Story) => {
     return (

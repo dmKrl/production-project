@@ -10,6 +10,10 @@
     transition: width 0.2s ease;
 }
 
+.lang {
+    color: var(--inverted-secondary-color);
+}
+
 .collapsed {
     width: var(--sidebar-width-collapsed);
 }
@@ -19,4 +23,8 @@
     flex-direction: column;
     gap: 20px;
     align-items: center;
+}
+
+.sidebarToggleButton {
+    color: var(--inverted-secondary-color);
 }

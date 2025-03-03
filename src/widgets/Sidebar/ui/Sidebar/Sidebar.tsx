@@ -16,17 +16,18 @@ export const Sidebar = ({ className }: SidebarProps) => {
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
-
+    // Проблема ошибки Storybook - в LangSwitcher
     return (
         <div
             data-testid='sidebar'
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
             <div className={classNames(cls.switchers, {}, [])}>
-                <LangSwitcher />
+                {/* <LangSwitcher className={cls.lang} /> */}
                 <ThemeSwitcher />
                 <Button
                     sidebarToggle='sidebar-toggle'
                     onClick={onToggle}
+                    className={classNames(cls.sidebarToggleButton, {}, [])}
                     theme={ThemeButton.CLEAR}>
                     {collapsed ? '>' : '<'}
                 </Button>

@@ -22,17 +22,17 @@ jobs:
 
             - name: Build production project
               run: npm run build:prod
-              
               if: always()
+
             - name: Test lint Typescript
               run: npm run lint:ts
-
               if: always()
+              
             - name: Test lint SCSS
               run: npm run lint:scss
-
               if: always()
-            - name: Tesi unit
+              
+            - name: Test unit
               run: npm run test:unit
 
             - name: Build storybook

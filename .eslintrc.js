@@ -38,6 +38,7 @@ module.exports = {
         ],
         'max-len': ['error', { code: 100, ignoreComments: true }],
         'linebreak-style': 0,
+        // eslint-disable-next-line no-dupe-keys
         'react/jsx-props-no-spreading': 0,
         'arrow-body-style': 0,
     },

@@ -3,3 +3,5 @@ package-lock.json
 /build
 /storybook-static
 .vscode
+/loki/report.json
+/loki/report.html

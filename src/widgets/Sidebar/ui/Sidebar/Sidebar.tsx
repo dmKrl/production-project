@@ -1,8 +1,8 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
 import { ThemeSwitcher } from 'features';
-import { LangSwitcher } from 'entities';
-import { AppLink, Button } from 'shared/ui';
+// import { LangSwitcher } from 'entities';
+import { AppLink, Button, LangSwitcher } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
@@ -26,6 +26,15 @@ export const Sidebar = ({ className }: SidebarProps) => {
         <div
             data-testid='sidebar'
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
+            <Button
+                sidebarToggle='sidebar-toggle'
+                onClick={onToggle}
+                className={classNames(cls.sidebarToggleButton, {}, [])}
+                theme={ButtonTheme.BACKGROUND_INVERTED}
+                square
+            >
+                {collapsed ? '>' : '<'}
+            </Button>
             <div className={cls.items}>
                 <AppLink to='/' theme={AppLinkTheme.SECONDARY} className={cls.item}>
                     <MainIcon className={cls.icon} />
@@ -37,17 +46,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 </AppLink>
             </div>
             <div className={classNames(cls.switchers, {}, [])}>
-                {/* <LangSwitcher short={collapsed} className={cls.lang} /> */}
                 <ThemeSwitcher />
-                <Button
-                    sidebarToggle='sidebar-toggle'
-                    onClick={onToggle}
-                    className={classNames(cls.sidebarToggleButton, {}, [])}
-                    theme={ButtonTheme.BACKGROUND_INVERTED}
-                    square
-                >
-                    {collapsed ? '>' : '<'}
-                </Button>
+                <LangSwitcher
+                    short={collapsed}
+                    className={cls.lang}
+                />
             </div>
         </div>
     );

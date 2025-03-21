@@ -1,0 +1,15 @@
+.input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input > input {
+    width: 100%;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.input:focus {
+    outline: none;
+}

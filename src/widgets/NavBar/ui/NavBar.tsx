@@ -2,7 +2,8 @@ import { FC, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ButtonTheme } from 'shared/ui/Button/Button';
-import { Button, Modal } from 'shared/ui';
+import { LoginModal } from 'features';
+import { Button } from 'shared/ui';
 import cls from './NavBar.module.scss';
 
 interface NavBarProps {
@@ -23,12 +24,7 @@ export const NavBar: FC<NavBarProps> = ({ className }) => {
                 <Button theme={ButtonTheme.CLEAR_INVERTED} onClick={handleIsAuthOpen}>
                     {t('Войти')}
                 </Button>
-                <Modal isOpen={isAuthOpen} onClose={handleIsAuthOpen}>
-                    {t(`Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Itaque corrupti autem nam ducimus eius ? Harum repellendus quo consequuntur!
-                    Assumenda est voluptatem,
-                        expedita non officia ullam facere tempore iusto odit ut!`)}
-                </Modal>
+                <LoginModal isOpen={isAuthOpen} onClose={handleIsAuthOpen} />
             </div>
         </div>
     );

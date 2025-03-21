@@ -3,6 +3,7 @@ import React, {
     ReactNode,
     useCallback,
     useEffect,
+    useState,
 } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Modal.module.scss';
@@ -11,11 +12,13 @@ import { Portal } from '../Portal/Portal';
 interface ModalProps {
     children: ReactNode;
     isOpen: boolean;
+    lazy?: boolean;
     onClose: () => void;
 }
 
 export const Modal: FC<ModalProps> = (props) => {
-    const { children, isOpen, onClose } = props;
+    const { children, isOpen, lazy, onClose } = props;
+    const [isMounted, setIsMounted] = useState(false);
 
     const mods: Record<string, boolean> = {
         [cls.opened]: isOpen,
@@ -33,6 +36,12 @@ export const Modal: FC<ModalProps> = (props) => {
 
     useEffect(() => {
         if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
+
+    useEffect(() => {
+        if (isOpen) {
             window.addEventListener('keydown', onKeyDownClose);
         }
 
@@ -40,6 +49,10 @@ export const Modal: FC<ModalProps> = (props) => {
             window.removeEventListener('keydown', onKeyDownClose);
         };
     }, [isOpen, onKeyDownClose]);
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal>

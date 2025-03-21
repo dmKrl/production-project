@@ -1,7 +1,9 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { CounterReducer } from 'entityes/Counter';
+import { UserReducer } from 'entityes/User';
 
 const rootReducer = combineReducers({
+    UserReducer,
     CounterReducer,
 });
 

@@ -1,0 +1,14 @@
+.loginInputsBlock,
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loginInputsBlock {
+    width: 100%;
+}
+
+.loginForm {
+    align-items: flex-start;
+}

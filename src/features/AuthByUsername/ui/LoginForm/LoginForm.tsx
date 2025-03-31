@@ -49,7 +49,7 @@ export const LoginForm: FC<LoginFormProps> = (props) => {
                     nameInput={t('Введите password')}
                 />
             </div>
-            {error && <Text theme={TextTheme.ERROR} text={error} />}
+            {error && <Text theme={TextTheme.ERROR} text={t('Некорректный логин/пароль')} />}
             <Button
                 disabled={isLoading}
                 onClick={handerLoginOnClick}

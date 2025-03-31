@@ -50,6 +50,7 @@ export default {
         '<rootDir>/config/jest/setupTests.ts',
     ],
     preset: 'ts-jest',
+    globals: { __IS_DEV__: true },
 
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,

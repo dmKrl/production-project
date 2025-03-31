@@ -1,22 +1,33 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { configureStore, ReducersMapObject } from '@reduxjs/toolkit';
 import { CounterReducer } from 'entityes/Counter';
 import { UserReducer } from 'entityes/User';
+import { LoginReducer } from 'features/AuthByUsername';
+import { StateSchema } from './StateSchema';
 
-const rootReducer = combineReducers({
-    UserReducer,
-    CounterReducer,
-});
+// const rootReducer = combineReducers({
+//     UserReducer,
+//     CounterReducer,
+//     LoginReducer,
+// });
+
+const rootReducers: ReducersMapObject<StateSchema> = {
+    counter: CounterReducer,
+    user: UserReducer,
+    login: LoginReducer,
+};
 
 export const store = configureStore({
-    reducer: rootReducer,
+    reducer: rootReducers,
 });
 
-export const setupStore = () => {
+export const setupStore = (initialState: StateSchema) => {
     return configureStore({
-        reducer: rootReducer,
+        reducer: rootReducers,
+        devTools: __IS_DEV__,
+        preloadedState: initialState as StateSchema,
     });
 };
 
-export type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof store.getState>;
 export type AppStore = ReturnType<typeof setupStore>;
 export type AppDispatch = typeof store.dispatch;

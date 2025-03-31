@@ -36,7 +36,7 @@ module.exports = {
             'warn',
             { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'sidebarToggle'] },
         ],
-        'max-len': ['error', { code: 100, ignoreComments: true }],
+        'max-len': ['error', { code: 110, ignoreComments: true }],
         'linebreak-style': 0,
         // eslint-disable-next-line no-dupe-keys
         'react/jsx-props-no-spreading': 0,
@@ -51,6 +51,12 @@ module.exports = {
         {
             files: ['src/**/*.slice.ts'],
             rules: { 'no-param-reassign': ['error', { props: false }] },
+        },
+        {
+            files: ['tests/**/*'],
+            env: {
+                jest: true,
+            },
         },
     ],
     globals: {

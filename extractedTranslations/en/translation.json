@@ -1,11 +1,19 @@
 {
+  "": "",
   "Lorem ipsum dolor sit amet consectetur adipisicing elit": {
     "\n                    Itaque corrupti autem nam ducimus eius ? Harum repellendus quo consequuntur!\n                    Assumenda est voluptatem,\n                        expedita non officia ullam facere tempore iusto odit ut!": ""
   },
+  "oshibka-zaprosa-servera": "",
   "Введите password": "",
   "Введите username": "",
   "Войти": "",
+  "Вы ввели неп": "",
+  "Вы ввели неправильный логин или пароль": "",
+  "Выйти": "",
   "Главная": "",
+  "Некорректный логин/пароль": "",
   "О Сайте": "",
-  "Страница не найдена": ""
+  "Ошибка запроса сервера": "",
+  "Страница не найдена": "",
+  "Форма авторизации": ""
 }

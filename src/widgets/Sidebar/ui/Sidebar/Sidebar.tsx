@@ -1,13 +1,12 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useState } from 'react';
-import { ThemeSwitcher } from 'features';
-// import { LangSwitcher } from 'entities';
 import { AppLink, Button, LangSwitcher } from 'shared/ui';
 import { ButtonTheme } from 'shared/ui/Button/Button';
 import { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
 import MainIcon from 'shared/assets/main-20-20.svg';
 import AboutIcon from 'shared/assets/about-20-20.svg';
+import { ThemeSwitcher } from 'features/ThemeSwitcher';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -21,7 +20,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
     const onToggle = () => {
         setCollapsed((prev) => !prev);
     };
-    // Проблема ошибки Storybook - в LangSwitcher
+
     return (
         <div
             data-testid='sidebar'

@@ -4,3 +4,4 @@ export { Loader } from './Loader/Loader';
 export { LangSwitcher } from './LangSwitcher/LangSwitcher';
 export { Modal } from './Modal/Modal';
 export { Portal } from './Portal/Portal';
+export { Text } from './Text/Text';

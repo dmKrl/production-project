@@ -4,5 +4,5 @@ export type User = {
 };
 
 export interface UserSchema {
-    authUser?: User,
+    authData?: User,
 }

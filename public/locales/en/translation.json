@@ -5,6 +5,10 @@
     "Страница не найдена": "Pаge not found",
     "Короткий язык": "En",
     "Войти": "Login",
+    "Выйти": "Logout",
     "Введите username": "Enter username",
-    "Введите password": "Enter password"
+    "Введите password": "Enter password",
+    "Ошибка запроса сервера": "Error request server",
+    "Форма авторизации": "Form login",
+    "Некорректный логин/пароль": "Uncorrect username or password"
 }

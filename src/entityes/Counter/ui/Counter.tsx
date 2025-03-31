@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from 'app/providers/StoreProvider/hook
 import { decrement, increment } from '../model/slices/Counter.slice';
 
 export const Counter = () => {
-    const { counter } = useAppSelector((state) => state.CounterReducer);
+    const { counter } = useAppSelector((state) => state.counter);
     const dispatch = useAppDispatch();
 
     const handleIncrement = () => {
